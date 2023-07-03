@@ -26,7 +26,7 @@ I also am [exploring using Deno](https://github.com/nikitavoloboev/deno) as it h
 
 ## Discuss / help
 
-Search for [existing issues](../../issues) or open [new ones](../../issues/new/choose).
+Search for [existing issues](../../issues) or open [new one](../../issues/new/choose).
 
 ## Thank you
 
