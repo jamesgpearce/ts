@@ -1,24 +1,35 @@
 # TS libraries
 
-I run all code with [Bun](https://bun.sh).
+## Setup
+
+```
+pnpm i
+```
+
+## Run
+
+```
+pnpm dev
+```
+
+This will run [run.ts](run.ts) file with [tsx](https://github.com/esbuild-kit/tsx).
+
+## Run with Bun
+
+I often prefer to run things with [Bun](https://bun.sh/) if library supports.
+
+```
+pnpm dev:bun
+```
+
+## Publish libraries
 
 Need to setup a nice way to export things inside [lib](lib) folder to NPM.
 
-## Develop
+## File structure
 
-All library code is found in [lib](lib). All code that I'm trying out is in [try](try) folder.
-
-I also use [run.ts](run.ts) file as a quick way to run some code and see output of it.
-
-```
-bun run.ts
-```
-
-Or for better DX, I use [watchexec](https://watchexec.github.io/) command and run:
-
-`watchexec --restart --exts ts "tput reset && bun run.ts" --project-origin .`
-
-This will rerun [run.ts](run.ts) file if any of the .ts files change. Makes for nice experience developing. Swap `run.ts` for a file you want to run.
+- [lib](lib) - library code
+- [try](try) - trying things out
 
 ## Deno
 
