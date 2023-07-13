@@ -29,6 +29,9 @@ dependencies:
   execa:
     specifier: ^7.0.0
     version: 7.1.1
+  fs-nano-store:
+    specifier: ^0.3.1
+    version: 0.3.1
   gray-matter:
     specifier: ^4.0.3
     version: 4.0.3
@@ -50,6 +53,9 @@ dependencies:
   telegraf:
     specifier: ^4.12.2
     version: 4.12.2
+  tinybase:
+    specifier: ^4.0.0
+    version: 4.0.0(prettier@2.8.8)
   zx:
     specifier: ^7.1.1
     version: 7.2.2
@@ -808,6 +814,10 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 4.0.0
       universalify: 0.1.2
+    dev: false
+
+  /fs-nano-store@0.3.1:
+    resolution: {integrity: sha512-+sp70TyOBCZJdkUIkhbLABaPQDbUylRtQLPoYWaT7+M7OZH8mSHlSSprWt6wa9cNn1hGixMsb1FU99lbyl3xsw==}
     dev: false
 
   /fs.realpath@1.0.0:
@@ -1716,6 +1726,36 @@ packages:
 
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
+    dev: false
+
+  /tinybase@4.0.0(prettier@2.8.8):
+    resolution: {integrity: sha512-+2yxUb64Xb9LiGZM/lm+W4wE9rS+IaD9lSZ3RvdSbORNtUesJmCKO3C98hZy4CHik5HVThQ4TS4bffJ5yYjdAQ==}
+    hasBin: true
+    peerDependencies:
+      '@sqlite.org/sqlite-wasm': ^3.42.0-build2
+      '@vlcn.io/crsqlite-wasm': ^0.13.0
+      automerge-repo: ^0.1.0
+      prettier: ^2.8.8
+      react: ^18.2.0
+      sqlite3: ^5.1.6
+      yjs: ^13.6.6
+    peerDependenciesMeta:
+      '@sqlite.org/sqlite-wasm':
+        optional: true
+      '@vlcn.io/crsqlite-wasm':
+        optional: true
+      automerge-repo:
+        optional: true
+      prettier:
+        optional: true
+      react:
+        optional: true
+      sqlite3:
+        optional: true
+      yjs:
+        optional: true
+    dependencies:
+      prettier: 2.8.8
     dev: false
 
   /to-regex-range@5.0.1:
