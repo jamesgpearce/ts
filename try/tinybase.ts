@@ -1,8 +1,30 @@
+// @ts-ignore
 import { createStore } from "tinybase"
+import { readFile } from "node:fs/promises"
 
-export function runTinyBase() {
-  const store = createStore()
-  store.setValue("v1", "Hello")
-  store.setCell("t1", "r1", "c1", "World")
-  console.log(store.getValue("v1") + " " + store.getCell("t1", "r1", "c1"))
+const store = createStore().setValuesSchema({
+  filePath: { type: "string" },
+  topicName: { type: "string" },
+  content: { type: "string" },
+})
+
+export async function saveFileContent(path: string) {
+  const fileContent = await readFile(path, { encoding: "utf8" })
+  store.setValues({
+    filePath: path,
+    topicName: "karabiner",
+    content: fileContent,
+  })
+  console.log(fileContent)
+}
+
+export async function getTopic() {
+  console.log(store.getValues())
+}
+
+export async function runTinyBase() {
+  await saveFileContent(
+    "/Users/nikiv/src/docs/wiki/docs/macOS/apps/karabiner/karabiner.md"
+  )
+  getTopic()
 }
